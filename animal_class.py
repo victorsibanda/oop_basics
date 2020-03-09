@@ -14,7 +14,9 @@ class Animal():
     pass
     #define behaviour and characteristics
     #define characteristics of Every Animal
-    def __init__(self, name,age_days,colour) :
+
+
+    def __init__(self, name,age_days,colour = 'blueish') : #colour is now default blueish
         self.name = name
         self.__age_days = age_days
         self.hearts = True
