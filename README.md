@@ -44,7 +44,31 @@ Real life Example:
 - Each object are privately held inside a defined boundary, or class.
 - Other objects do not have access to this class or the authority to make changes unless they reference it directly.
 - Encapsulation improves the program’s security and avoids unintended data corruption
+- Making methods of attributes private, When methods or attributes are private they can be called by its own functions within a class. 
+- **Restricts Access**
+- **Making Private**
 
+Example:
+
+This leads to getters and setters!
+
+syntax: 
+
+```Python
+class Animal():
+    pass
+    #define behaviour and characteristics
+    #define characteristics of Every Animal
+    def __init__(self, name,age,colour) :
+        self.name = name
+        self.__age = age
+        self.hearts = True
+        self.colour = colour
+        self.brain = True
+
+# double underscore makes it private eg. self.__age = age
+
+```
 ## Inheritance
  - Developers can reuse common logic while maintaining a unique hierarchy by assigning relationships and subclasses between objects.
  - This forces more thorough data analysis, reduces development time and ensures a high level of accuracy.
@@ -114,6 +138,8 @@ class Reptile(Animal):
 #Added Attributes
 
 ```
+
+
 
 
 
