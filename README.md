@@ -59,7 +59,61 @@ Real life Example:
 using .super()
 
 
-##Super 
+##.Super()
+
+Represents the parent class, and allows you to call methods and characteristics from parent class. 
+
+Usage and case in point:
+- situation where you want to overwrite a method (say method .honk())
+- You want to add new functionality to the new method, but you still want everything for the first method
+
+--> then you call super()
+
+Most of the times this is used with the __init__ method 
+- You want to add new characteristics to child object and you want to keep original characteristics
+- You overwrite the init method and still call  the original init method, with the necessary arguments.
+
+```Python
+class Animal():
+
+    def __init__(self,age,colour_fur):
+        self.age = age
+        self.colour_fur = colour_fur    
+
+```
+
+## Use from Original Class
+
+```Python
+class Reptile(Animal):
+    pass
+
+#Using same attributes
+```
+
+## Overwrite Completely
+```Python
+class Reptile(Animal):
+
+    def __init__(self,scales,blood_temp):
+        self.scales = scales
+        self.blood_temp = blood_temp
+
+#Completely Overwritten
+
+```
+## Overwrite and Use from Original Class
+```Python
+class Reptile(Animal):
+
+    def __init__(self,age,colour_fur,scales,blood_temp):
+        super().__init__ (age, colour_fur)
+        self.scales = scales
+        self.blood_temp = blood_temp
+
+#Added Attributes
+
+```
 
 
 
